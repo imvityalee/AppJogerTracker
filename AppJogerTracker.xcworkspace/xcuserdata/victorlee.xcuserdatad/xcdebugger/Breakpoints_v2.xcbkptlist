@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "29B45EA8-D9AF-49F1-9BC9-D00B2D564D0F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75219880-5FDB-4748-BEBF-20A98C01A923"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Menu/BaseViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "openMenu()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "476B5886-711C-4B60-B967-F08E5016095A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A14CC08-39ED-496B-AC0C-0BE1DD9A6EDA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Jogs/Datasource/JogsTableViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "dataSource(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "248D5ABC-FBF8-4DB1-9097-C8F88A9B1E59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Jogs/Datasource/JogsTableViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "JogsSactionModel"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68CFD21F-9EFC-4C25-9918-EAFB282300C0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Jogs/Datasource/JogsTableViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init(original:items:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "JogsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4 - 819e570b8c416571"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewController.dataSource.getter : RxDataSources.RxTableViewSectionedReloadDataSource&lt;AppJogerTracker.JogsSactionModel&gt;"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "171">
+               </Location>
+               <Location
+                  uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4 - 819e570b8c416571"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewController.dataSource.setter : RxDataSources.RxTableViewSectionedReloadDataSource&lt;AppJogerTracker.JogsSactionModel&gt;"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4 - 819e570b8c4164c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewController.dataSource.modify : RxDataSources.RxTableViewSectionedReloadDataSource&lt;AppJogerTracker.JogsSactionModel&gt;"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4 - 307bde30e0ea4f31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewController.dataSource.modify : RxDataSources.RxTableViewSectionedReloadDataSource&lt;AppJogerTracker.JogsSactionModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4 - 47a62ff3e08e02e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;AppJogerTracker.JogsViewController&gt;"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "4385E201-66B5-4327-A2E9-4E36D7F5F9C4 - b7257815aff181b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewController.init(viewModel: AppJogerTracker.JogsViewModel) -&gt; AppJogerTracker.JogsViewController"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "66">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0C37149-9272-4B27-ADDC-176E58243FC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "logIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8C0F812-8491-41A6-8695-B0875AA11A35"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "logIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13BA1354-78C4-45C1-94DE-9A2A917B104B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Application /AppFlow/AppFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "AppFlow"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77DA31EC-54CB-4765-AEF5-88A5C98B4307"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Application /AppFlow/AppFlow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "navigateToLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4850E8C-C1A3-4058-B187-243F74202136"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "logIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9FA7289-45AA-4CEC-97D5-419C9E65D9D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppJogerTracker/Modules/Jogs/JogsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "onLoadView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E9FA7289-45AA-4CEC-97D5-419C9E65D9D2 - e463d8adcb2bcfad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppJogerTracker.JogsViewModel.onLoadView() -&gt; ()"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "174">
+               </Location>
+               <Location
+                  uuid = "E9FA7289-45AA-4CEC-97D5-419C9E65D9D2 - 54b1bbbd92cdb8b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;AppJogerTracker.Jog&gt;) -&gt; () in AppJogerTracker.JogsViewModel.onLoadView() -&gt; ()"
+                  moduleName = "AppJogerTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victorlee/Desktop/My%20Projects/AppJogerTracker/AppJogerTracker/Modules/Jogs/JogsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
