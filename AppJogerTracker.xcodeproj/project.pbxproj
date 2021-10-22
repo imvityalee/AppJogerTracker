@@ -32,9 +32,10 @@
 		B1857E5B271AF80A0038ED42 /* AppJogerTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1857E5A271AF80A0038ED42 /* AppJogerTrackerTests.swift */; };
 		B1857E65271AF80A0038ED42 /* AppJogerTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1857E64271AF80A0038ED42 /* AppJogerTrackerUITests.swift */; };
 		B1857E67271AF80A0038ED42 /* AppJogerTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1857E66271AF80A0038ED42 /* AppJogerTrackerUITestsLaunchTests.swift */; };
+		B18EDA382722D36D004DD7FE /* JogAddingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EDA372722D36D004DD7FE /* JogAddingViewModel.swift */; };
 		B194ABA0271E980D00D428C1 /* JogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194AB9F271E980D00D428C1 /* JogDetailView.swift */; };
 		B194ABA2271E983100D428C1 /* JogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194ABA1271E983100D428C1 /* JogDetailViewController.swift */; };
-		B194ABA4271E983A00D428C1 /* JogDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194ABA3271E983A00D428C1 /* JogDetailViewModel.swift */; };
+		B194ABA4271E983A00D428C1 /* JogDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194ABA3271E983A00D428C1 /* JogDetailViewModelImpl.swift */; };
 		B194ABA9271ECD9300D428C1 /* JogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194ABA8271ECD9300D428C1 /* JogInfoView.swift */; };
 		B194ABAD271ECDBD00D428C1 /* JogInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194ABAC271ECDBD00D428C1 /* JogInfoViewController.swift */; };
 		B194ABAF271ECDC800D428C1 /* JogInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194ABAE271ECDC800D428C1 /* JogInfoViewModel.swift */; };
@@ -51,6 +52,8 @@
 		B1DC2A8727215BD2002A868B /* JogsEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A8627215BD2002A868B /* JogsEndPoints.swift */; };
 		B1DC2A8927215CDE002A868B /* JogsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A8827215CDE002A868B /* JogsManagerProtocol.swift */; };
 		B1DC2A8B27215E95002A868B /* JogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A8A27215E95002A868B /* JogsService.swift */; };
+		B1DC2A8E2722ACAD002A868B /* JogDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A8D2722ACAD002A868B /* JogDetailFactory.swift */; };
+		B1DC2A912722AD01002A868B /* JogsEditingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A902722AD01002A868B /* JogsEditingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +107,10 @@
 		B1857E60271AF80A0038ED42 /* AppJogerTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppJogerTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1857E64271AF80A0038ED42 /* AppJogerTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppJogerTrackerUITests.swift; sourceTree = "<group>"; };
 		B1857E66271AF80A0038ED42 /* AppJogerTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppJogerTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B18EDA372722D36D004DD7FE /* JogAddingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogAddingViewModel.swift; sourceTree = "<group>"; };
 		B194AB9F271E980D00D428C1 /* JogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogDetailView.swift; sourceTree = "<group>"; };
 		B194ABA1271E983100D428C1 /* JogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogDetailViewController.swift; sourceTree = "<group>"; };
-		B194ABA3271E983A00D428C1 /* JogDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogDetailViewModel.swift; sourceTree = "<group>"; };
+		B194ABA3271E983A00D428C1 /* JogDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogDetailViewModelImpl.swift; sourceTree = "<group>"; };
 		B194ABA8271ECD9300D428C1 /* JogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogInfoView.swift; sourceTree = "<group>"; };
 		B194ABAC271ECDBD00D428C1 /* JogInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogInfoViewController.swift; sourceTree = "<group>"; };
 		B194ABAE271ECDC800D428C1 /* JogInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogInfoViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		B1DC2A8627215BD2002A868B /* JogsEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsEndPoints.swift; sourceTree = "<group>"; };
 		B1DC2A8827215CDE002A868B /* JogsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsManagerProtocol.swift; sourceTree = "<group>"; };
 		B1DC2A8A27215E95002A868B /* JogsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsService.swift; sourceTree = "<group>"; };
+		B1DC2A8D2722ACAD002A868B /* JogDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogDetailFactory.swift; sourceTree = "<group>"; };
+		B1DC2A902722AD01002A868B /* JogsEditingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsEditingViewModel.swift; sourceTree = "<group>"; };
 		B4D6F30B71971232DDA0AEFC /* Pods-AppJogerTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		D41D7CA1E4EA28BB6AA2E379 /* Pods_AppJogerTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -292,9 +298,10 @@
 		B194AB9D271E97EC00D428C1 /* JogDetail */ = {
 			isa = PBXGroup;
 			children = (
+				B1DC2A8F2722ACE3002A868B /* ViewModel */,
+				B1DC2A8C2722AC8C002A868B /* Factory */,
 				B194AB9F271E980D00D428C1 /* JogDetailView.swift */,
 				B194ABA1271E983100D428C1 /* JogDetailViewController.swift */,
-				B194ABA3271E983A00D428C1 /* JogDetailViewModel.swift */,
 			);
 			path = JogDetail;
 			sourceTree = "<group>";
@@ -400,6 +407,24 @@
 				B1DC2A8827215CDE002A868B /* JogsManagerProtocol.swift */,
 			);
 			path = Jogs;
+			sourceTree = "<group>";
+		};
+		B1DC2A8C2722AC8C002A868B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				B1DC2A8D2722ACAD002A868B /* JogDetailFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		B1DC2A8F2722ACE3002A868B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B194ABA3271E983A00D428C1 /* JogDetailViewModelImpl.swift */,
+				B1DC2A902722AD01002A868B /* JogsEditingViewModel.swift */,
+				B18EDA372722D36D004DD7FE /* JogAddingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D60BE7D39D21828BE2582F2D /* Pods */ = {
@@ -684,11 +709,13 @@
 				B1A2D5BE271D6C7400501D82 /* JogsTableViewDataSource.swift in Sources */,
 				B138DB1C271BED8D0059E584 /* Constants.swift in Sources */,
 				B194ABAD271ECDBD00D428C1 /* JogInfoViewController.swift in Sources */,
-				B194ABA4271E983A00D428C1 /* JogDetailViewModel.swift in Sources */,
+				B194ABA4271E983A00D428C1 /* JogDetailViewModelImpl.swift in Sources */,
+				B1DC2A912722AD01002A868B /* JogsEditingViewModel.swift in Sources */,
 				B138DB2B271C12BE0059E584 /* AppFlow.swift in Sources */,
 				B138DB26271C05F00059E584 /* MenuViewModel.swift in Sources */,
 				B1857E48271AF8050038ED42 /* BaseViewController.swift in Sources */,
 				B194ABAF271ECDC800D428C1 /* JogInfoViewModel.swift in Sources */,
+				B18EDA382722D36D004DD7FE /* JogAddingViewModel.swift in Sources */,
 				B1A2D5B6271D4FD000501D82 /* JogsView.swift in Sources */,
 				B1DC2A8727215BD2002A868B /* JogsEndPoints.swift in Sources */,
 				B1DC2A8B27215E95002A868B /* JogsService.swift in Sources */,
@@ -697,6 +724,7 @@
 				B1A2D5B1271D3B9D00501D82 /* LoginViewModel.swift in Sources */,
 				B1A2D5AD271D3B7C00501D82 /* LoginView.swift in Sources */,
 				B11C3966272063C800209681 /* Alertable.swift in Sources */,
+				B1DC2A8E2722ACAD002A868B /* JogDetailFactory.swift in Sources */,
 				B138DB29271C12B20059E584 /* AppStep.swift in Sources */,
 				B1A2D5B8271D4FE000501D82 /* JogsViewModel.swift in Sources */,
 				B1857E44271AF8050038ED42 /* AppDelegate.swift in Sources */,

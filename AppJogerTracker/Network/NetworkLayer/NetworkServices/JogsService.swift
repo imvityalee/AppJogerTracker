@@ -6,14 +6,33 @@ protocol JogsProviderProtocol: AnyObject {
     func getJogs() -> Single<[Jog]>
     func createJog(jog: Jog) -> Single<Bool>
     func editJog(jog: Jog) -> Single<Bool>
+    func checkIfJogExists(_ jog: Jog) -> Single<Jog>
 }
 
 class JogsProvider: JogsProviderProtocol {
-    
+
     private let network: JogsNetworkManagerProtocol?
     
     init(network: JogsNetworkManagerProtocol?) {
         self.network = network
+    }
+    
+    func checkIfJogExists(_ jog: Jog) -> Single<Jog> {
+        return Single.create { [weak self] single in
+            guard let network = self?.network else {
+                //TO DO: make errors
+                single(SingleEvent.error(NetworkError.notConnectedToInternet))
+                return Disposables.create()
+            }
+            let disposable = network.checkIfJogExists(jog)
+                .map { _ in return jog }
+                .subscribe(onSuccess: { data in
+                    single(SingleEvent.success(data))
+                }, onError: { error in
+                    single(SingleEvent.error(error))
+                })
+            return Disposables.create([disposable])
+        }
     }
 
     func getJogs() -> Single<[Jog]> {

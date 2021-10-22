@@ -8,6 +8,7 @@ enum NetworkError: LocalizedError {
     case invalidData
     case invalidAuthentication
     case notConnectedToInternet
+    case jogAlreadyExists
     
     public var errorDescription: String? {
         switch self {
@@ -19,6 +20,8 @@ enum NetworkError: LocalizedError {
             return "Provided invalid credentials"
         case .notConnectedToInternet:
             return "No Internet connection"
+        case .jogAlreadyExists:
+            return "Jog already Exists"
         }
     }
 }

@@ -33,14 +33,33 @@ class AppAssembly {
             JogsProvider(network: $0.resolve(NetworkLayer.self))
         }.inObjectScope(.container)
         
+        container.register(JogsNetworkManagerProtocol.self) {
+            NetworkLayer(preferences: $0.resolve(AppPreferences.self))
+        }.inObjectScope(.container)
+        
+        container.register(JogsProvider.self) {
+            JogsProvider(network: $0.resolve(JogsNetworkManagerProtocol.self))
+        }.inObjectScope(.container)
+        
         container.register(Jog.self) { _ in
             Jog.init()
         }.inObjectScope(.container)
         
         container.register(JogsViewModel.self) {
             JogsViewModel(jogsProvider: $0.resolve(JogsProviderProtocol.self))
+        }.inObjectScope(.container)
+        
+        container.register(JogDetailViewModelImpl.self) {
+            JogDetailViewModelImpl(jogProvider: $0.resolve(JogsProvider.self), jog: $0.resolve(Jog.self)!)
         }
-
+        
+        container.register(JogsEditingViewModel.self) {
+            JogsEditingViewModel(jogProvider: $0.resolve(JogsProviderProtocol.self), jog: $0.resolve(Jog.self)!)
+        }
+        
+        container.register(JogAddingViewModel.self) {
+            JogAddingViewModel(jogProvider: $0.resolve(JogsProviderProtocol.self), jog: $0.resolve(Jog.self)!)
+        }
         
 //        container.register(JogsProviderProtocol.self) {
 //            JogsProvider(network: $0.resolve(NetworkLayer.self))

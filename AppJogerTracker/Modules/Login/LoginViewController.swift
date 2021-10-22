@@ -6,15 +6,15 @@ class LoginViewController: BaseViewController<LoginView,LoginViewModel>  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        conentView.filterButton.isHidden = true
+        contentView.filterButton.isHidden = true
         bind(output: viewModel.transform(input: inputs))
          
       
     }
        private var inputs: LoginViewModel.Input {
-           return LoginViewModel.Input(menuTrigger: conentView.menuButton.rx.tap.asDriver(),
-                                       requisite: conentView.loginTextfield.rx.text.orEmpty.asDriver(),
-                                       nextTrigger: conentView.loginButton.rx.tap.asDriver())
+           return LoginViewModel.Input(menuTrigger: contentView.menuButton.rx.tap.asDriver(),
+                                       requisite: contentView.loginTextfield.rx.text.orEmpty.asDriver(),
+                                       nextTrigger: contentView.loginButton.rx.tap.asDriver())
        }
        private func bind(output: LoginViewModel.Output) {
 

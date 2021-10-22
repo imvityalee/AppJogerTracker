@@ -5,7 +5,7 @@ import RxSwift
 
 public class BaseViewController<View: UIView, ViewModel: ViewModelType>: UIViewController, Alertable {
         
-   public lazy var conentView = view as! View
+   public lazy var contentView = view as! View
    public lazy var disposableBag: DisposeBag! = .init()
    public var viewModel: ViewModel
     
@@ -24,20 +24,6 @@ public class BaseViewController<View: UIView, ViewModel: ViewModelType>: UIViewC
     }
    public override func viewDidLoad() {
         super.viewDidLoad()
-//      bind(output: viewModel.transform(input: inputs as! ViewModel.Input) as! BaseViewModel.Output)
-       
+
     }
-   
-//   public var inputs: BaseViewModel.Input {
-//      return BaseViewModel.Input(menuTrigger: conentView.menuButton.rx.tap.asDriver(),
-//                                 filterTrigger: conentView.filterButton.rx.tap.asDriver())
-//   }
-//   public func bind(output: BaseViewModel.Output) {
-//      disposableBag.insert([
-//         output.menuTapped.drive(),
-//         output.filterTapped.drive()
-//      ])
-//   }
-   
-    
 }

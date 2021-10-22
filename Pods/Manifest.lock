@@ -1,4 +1,7 @@
 PODS:
+  - Action (4.2.0):
+    - RxCocoa (< 7.0, >= 5.0)
+    - RxSwift (< 7.0, >= 5.0)
   - Alamofire (5.4.4)
   - Differentiator (4.0.1)
   - IQKeyboardManagerSwift (6.5.6)
@@ -40,6 +43,7 @@ PODS:
     - Swinject (~> 2.7)
 
 DEPENDENCIES:
+  - Action
   - IQKeyboardManagerSwift
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift (~> 14.0)
@@ -56,6 +60,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Action
     - Alamofire
     - Differentiator
     - IQKeyboardManagerSwift
@@ -74,6 +79,7 @@ SPEC REPOS:
     - SwinjectAutoregistration
 
 SPEC CHECKSUMS:
+  Action: 5dc2194f7a0b77857c82a677b0da655f197c005f
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -91,6 +97,6 @@ SPEC CHECKSUMS:
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: e81d4ca65ca073bbd10b93598080ff4cab4d705d
+PODFILE CHECKSUM: 93744ceaebbebcfb566b6ef9d02cbe1ffe4c4acb
 
 COCOAPODS: 1.11.2

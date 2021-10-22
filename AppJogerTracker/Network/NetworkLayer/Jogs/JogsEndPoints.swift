@@ -3,7 +3,7 @@ import Foundation
 
 enum JogsEndPoints {
     case jogs(token: String)
-    case  editJog(jog: Jog, token: String)
+    case editJog(jog: Jog, token: String)
     case createJog(jog: Jog, token: String)
 }
 
@@ -40,7 +40,8 @@ extension JogsEndPoints: TargetType {
     var task: Task {
         switch self {
         case .jogs(let token):
-            return .requestParameters(parameters: ["access_token": token], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["access_token": token],
+                                      encoding: URLEncoding.default)
         case .createJog(let jog, let token):
             return .requestParameters(parameters: ["access_token": token,
                                                    "date": jog.date.timeIntervalSinceReferenceDate.description,

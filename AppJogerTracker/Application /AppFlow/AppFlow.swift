@@ -32,14 +32,18 @@ class AppFlow: Flow {
         case .jogs:
             return navigateToJogs()
         case .jogsDetail(let jog):
-            return navigateToJogsDetails(jogs: jog)
+            return navigateToJogsDetails(jog: jog)
+        case .addJog:
+            return navigateToAddJog()
         case .menu:
             return navigateToMenu()
+
         case .info:
             return navigateToInfo()
         case .close:
             rootViewController.dismiss(animated: true, completion: nil)
             return .none
+       
         }
     }
     
@@ -64,14 +68,24 @@ class AppFlow: Flow {
                 guard let self = self else { return }
                 self.rootViewController.dismiss(animated: true, completion: nil)
             }
-        }
-        
+      }
         self.rootViewController.pushViewController(viewController, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))
     }
     
-    private func navigateToJogsDetails(jogs: Jog) -> FlowContributors {
-        let viewModel = JogDetailViewModel.init()
+    private func navigateToJogsDetails(jog: Jog) -> FlowContributors {
+        let service = appAssembly.container.resolve(JogsProviderProtocol.self)
+        let viewModel = JogsEditingViewModel.init(jogProvider: service, jog: jog)
+        let viewController = JogDetailViewController(viewModel: viewModel)
+        viewController.modalTransitionStyle = .crossDissolve
+        viewController.modalPresentationStyle = .currentContext
+        
+        self.rootViewController.present(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))
+    }
+    private func navigateToAddJog() -> FlowContributors {
+        let service = appAssembly.container.resolve(JogsProviderProtocol.self)
+        let viewModel = JogAddingViewModel.init(jogProvider: service, jog: .init())
         let viewController = JogDetailViewController(viewModel: viewModel)
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .currentContext
