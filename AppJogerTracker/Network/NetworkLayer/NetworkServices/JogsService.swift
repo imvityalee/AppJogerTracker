@@ -21,7 +21,7 @@ class JogsProvider: JogsProviderProtocol {
         return Single.create { [weak self] single in
             guard let network = self?.network else {
                 //TO DO: make errors
-                single(SingleEvent.error(NetworkError.notConnectedToInternet))
+                single(SingleEvent.error(NetworkErrorHandler.notConnectedToInternet))
                 return Disposables.create()
             }
             let disposable = network.checkIfJogExists(jog)
@@ -39,7 +39,7 @@ class JogsProvider: JogsProviderProtocol {
         return Single.create { [weak self] single in
             guard let network = self?.network else {
                 //TO DO: make errors
-                single(SingleEvent.error(NetworkError.notConnectedToInternet))
+                single(SingleEvent.error(NetworkErrorHandler.notConnectedToInternet))
                 return Disposables.create()
             }
             let disposable = network.jogs()
@@ -56,7 +56,7 @@ class JogsProvider: JogsProviderProtocol {
         return Single.create { [weak self] single in
             guard let network = self?.network else {
                 //TO DO: make errors
-                single(SingleEvent.error(NetworkError.notConnectedToInternet))
+                single(SingleEvent.error(NetworkErrorHandler.notConnectedToInternet))
                 return Disposables.create()
             }
             let disposable = network.createJog(jog: jog)
@@ -73,7 +73,7 @@ class JogsProvider: JogsProviderProtocol {
         return Single.create { [weak self] single in
             guard let network = self?.network else {
                 //TO DO: make errors
-                single(SingleEvent.error(NetworkError.invalidAuthentication))
+                single(SingleEvent.error(NetworkErrorHandler.invalidAuth))
                 return Disposables.create()
             }
             let disposable = network.editJog(jog: jog)

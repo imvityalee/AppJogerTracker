@@ -22,7 +22,7 @@ extension NetworkLayer: JogsNetworkManagerProtocol {
                     && $0.date == jog.date
                     && $0.time == jog.time
                 }) {
-                    throw NetworkError.jogAlreadyExists
+                    throw NetworkErrorHandler.jogAlreadyExists
                 }
             }
             

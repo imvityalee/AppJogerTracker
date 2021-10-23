@@ -2,35 +2,14 @@
 import RxSwift
 import RxCocoa
 import Moya
+import Dispatch
 
-enum NetworkError: LocalizedError {
-    case unknown
-    case invalidData
-    case invalidAuthentication
-    case notConnectedToInternet
-    case jogAlreadyExists
-    
-    public var errorDescription: String? {
-        switch self {
-        case .unknown:
-            return "Unexpected error happened"
-        case .invalidData:
-            return "JSON model could not be recognized"
-        case .invalidAuthentication:
-            return "Provided invalid credentials"
-        case .notConnectedToInternet:
-            return "No Internet connection"
-        case .jogAlreadyExists:
-            return "Jog already Exists"
-        }
-    }
-}
 
 class NetworkLayer {
     private(set) var authProvider: MoyaProvider<AuthEndPoints>
     private(set) var jogsProvider: MoyaProvider<JogsEndPoints>
 //    private(set) var feedbackProvider: MoyaProvider<FeedbackEndPoints>
-    var authError = PublishSubject<NetworkError>()
+    var authError = PublishSubject<NetworkErrorHandler>()
     weak var preferences: AppPreferences?
     
     init(preferences: AppPreferences?) {
@@ -46,26 +25,32 @@ class NetworkLayer {
             .map(T.self)
             .catchError { [weak self] error in
                 guard let error = error as? MoyaError else {
-                    throw NetworkError.unknown
+                    throw NetworkErrorHandler.unknown
                 }
-                switch error {
-                case .jsonMapping, .objectMapping:
-                    throw NetworkError.invalidData
-                case .statusCode(_):
-                    self?.authError.onNext(.invalidAuthentication)
-                    throw NetworkError.invalidAuthentication
-                case .underlying(let error, _):
-                    self?.authError.onNext(.invalidAuthentication)
-                    let code = (error as NSError).code
-                    switch URLError.Code(rawValue: code) {
-                    case .notConnectedToInternet:
-                        throw NetworkError.notConnectedToInternet
-                    default: break
-                    }
-                    throw NetworkError.unknown
-                default:
-                    throw NetworkError.invalidData
-                }
+                guard let self = self else { return  Single.error(error)}
+                
+                return try self.handleError(error: error)
+        }
+    }
+    
+    private func handleError<T: Decodable>(error: MoyaError) throws ->  PrimitiveSequence<SingleTrait, T>  {
+        switch error {
+        case .jsonMapping, .objectMapping:
+            throw NetworkErrorHandler.invalidJsonData
+        case .statusCode(_):
+            authError.onNext(.invalidAuth)
+            throw NetworkErrorHandler.invalidAuth
+        case .underlying(let error, _):
+            authError.onNext(.invalidAuth)
+            let code = (error as NSError).code
+            switch URLError.Code(rawValue: code) {
+            case .notConnectedToInternet:
+                throw NetworkErrorHandler.notConnectedToInternet
+            default: break
+            }
+            throw NetworkErrorHandler.unknown
+        default:
+            throw NetworkErrorHandler.invalidJsonData
         }
     }
 }

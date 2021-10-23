@@ -1,29 +1,25 @@
 import Foundation
-
-fileprivate enum Constants {
-    static let userTokenKey = "userTokenKey"
-    static let userTokenTypeKey = "userTokenTypeKey"
-}
+import KeychainAccess
 
 final class AppPreferences {
     
-    private let defaults = UserDefaults.standard
+    private let keyChain = Keychain.init(service: "com.AppJoggerTracker.token")
     
     var userToken: String? {
         get {
-            return defaults.string(forKey: Constants.userTokenKey)
+            return try! keyChain.get(Constants.userTokenKey)
         }
         set {
-            defaults.set(newValue, forKey: Constants.userTokenKey)
+            return try! keyChain.set(newValue!, key: Constants.userTokenKey)
         }
     }
     
     var userTokenType: String? {
         get {
-            return defaults.string(forKey: Constants.userTokenTypeKey)
+            return try! keyChain.get(Constants.userTokenTypeKey)
         }
         set {
-            defaults.set(newValue, forKey: Constants.userTokenTypeKey)
+            return try! keyChain.set(newValue!, key: Constants.userTokenTypeKey)
         }
     }
     

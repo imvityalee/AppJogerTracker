@@ -15,7 +15,7 @@ class JogsViewModel: BaseViewModel, Stepper {
     
     weak var jogsProvider: JogsProviderProtocol?
     
-    var jogsData: [Jog] = []
+    let jogsData = BehaviorRelay<[Jog]>(value: [])
     
     init(jogsProvider: JogsProviderProtocol?) {
 
@@ -25,11 +25,10 @@ class JogsViewModel: BaseViewModel, Stepper {
     func onLoadView() {
         jogsProvider?.getJogs()
             .subscribe(onSuccess: { [weak self] jogs in
-                self?.jogsData = jogs
-                self?.jogsModel.accept([.init(header: LabelConstants.jogs, items: jogs.filter{ $0.distance > 15000})])
+                self?.jogsData.accept(jogs)
+                self?.jogsModel.accept([.init(header: LabelConstants.jogs, items: jogs)])
             }, onError: { [weak self] error in
                 self?.onErrorHandling.accept(error)
-                print("Error")
             }).disposed(by: disposBag)
     }
     
@@ -42,8 +41,7 @@ class JogsViewModel: BaseViewModel, Stepper {
     }
     
   private lazy var itemSelectedAction = Action<IndexPath, Void> { [unowned self] indexPath in
-        
-        let jog = self.jogsData[indexPath.row]
+        let jog = self.jogsData.value[indexPath.row]
         let step = AppStep.jogsDetail(jog)
         return .just(self.steps.accept(step))
     }

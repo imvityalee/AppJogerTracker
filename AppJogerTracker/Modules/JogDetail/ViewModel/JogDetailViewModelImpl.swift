@@ -11,7 +11,8 @@ class JogDetailViewModelImpl: BaseViewModel, Stepper {
     var steps: PublishRelay<Step> = .init()
     var time: BehaviorRelay<String> = .init(value: "")
     var distance: BehaviorRelay<String> = .init(value: "")
-    var date: BehaviorRelay<Date> = .init(value: Date())
+    var date: BehaviorRelay<String> = .init(value: "")
+    var onErrorHandling: BehaviorRelay<Error?> = .init(value: nil)
     
     var jogsPresentableModel: BehaviorRelay<JogsDetailPresentableModel> = .init(value: .init())
     
@@ -50,7 +51,7 @@ extension JogDetailViewModelImpl: ViewModelType {
         var savetrigger: Driver<Void>
         var time: Driver<String>
         var distance: Driver<String>
-        var date: Driver<Date>
+        var date: Driver<String>
     }
     
     struct Output {

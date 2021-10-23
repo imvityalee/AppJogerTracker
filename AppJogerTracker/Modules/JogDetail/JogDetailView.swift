@@ -3,40 +3,6 @@ import SnapKit
 import UIKit
 
 
-struct JogsDetailPresentableModel {
-    var distance: Float
-    var time: Float
-    var date: Date
-    
-    init(distance: Float = 0,
-         time: Float = 0,
-         date: Date = Date.now ) {
-        self.distance = distance
-        self.time = time
-        self.date = date
-    }
-}
-class MyAPIFunctions
-{
-    static let formatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy.MM.dd"
-
-        // make sure the following are the same as that used in the API
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale.current
-
-        return formatter
-    }()
-
-    class func shortString(fromDate date: Date) -> String {
-        return formatter.string(from: date)
-    }
-
-    class func date(fromShortString string: String) -> Date? {
-        return formatter.date(from: string)
-    }
-}
 class JogDetailView: BaseView {
     
     var view: UIView!
@@ -45,21 +11,20 @@ class JogDetailView: BaseView {
     var distanceLabel: UILabel!
     var timeTextFiled: UITextField!
     var timeLabel: UILabel!
-    var datePicker: UIDatePicker!
+    var dateTextfield: UITextField!
     var dateLabel: UILabel!
     var saveButton: UIButton!
     
+    func dateStringFormat(from date: Date) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: date)
+    }
+    
     func configure(model: JogsDetailPresentableModel) {
-//        var date = model.date
-//        let t = MyAPIFunctions.shortString(fromDate: date)
-//        let c = MyAPIFunctions.date(fromShortString: t)
         distanceTexfield.text = String(model.distance)
         timeTextFiled.text = String(model.time)
-//        datePicker.setDate(model.date, animated: true)
-        
-//        print(date)
-//        print(t)
-//        print(c)
+        dateTextfield.text = dateStringFormat(from: model.date)
     }
     override func setUpView() {
         super.setUpView()
@@ -89,14 +54,15 @@ class JogDetailView: BaseView {
             $0.leading.equalToSuperview().offset(37)
             $0.trailing.equalToSuperview().offset(-37)
         }
-        datePicker.snp.makeConstraints {
+        dateTextfield.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(37)
             $0.trailing.equalToSuperview().offset(-37)
+            $0.height.equalTo(31)
             $0.bottom.equalTo(saveButton.snp.top).offset(-41)
         }
         
         dateLabel.snp.makeConstraints {
-            $0.bottom.equalTo(datePicker.snp.top).offset(-5)
+            $0.bottom.equalTo(dateTextfield.snp.top).offset(-5)
             $0.leading.equalToSuperview().offset(37)
         }
         
@@ -137,7 +103,7 @@ class JogDetailView: BaseView {
         view.addSubview(distanceLabel)
         view.addSubview(timeTextFiled)
         view.addSubview(timeLabel)
-        view.addSubview(datePicker)
+        view.addSubview(dateTextfield)
         view.addSubview(dateLabel)
         view.addSubview(timeLabel)
         view.addSubview(saveButton)
@@ -167,9 +133,8 @@ class JogDetailView: BaseView {
     }
     
     private func configureDatePicker() {
-        datePicker = .init()
-        datePicker.datePickerMode = .date
-        makeRoundedView(datePicker)
+        dateTextfield = .init()
+        makeRoundedView(dateTextfield)
         
         dateLabel = .init()
         makeLabel(dateLabel, text: LabelConstants.date)

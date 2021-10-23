@@ -10,6 +10,7 @@ target 'AppJogerTracker' do
     pod 'RxSwift', '5.0'
     pod 'RxCocoa', '5.0'
     pod 'Action'
+    pod 'KeychainAccess'
     pod 'Swinject' 
     pod 'SwinjectAutoregistration', '2.7.0'
     pod 'SnapKit', '~> 5.0.0'

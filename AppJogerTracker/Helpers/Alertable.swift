@@ -13,6 +13,9 @@ extension Alertable where Self: UIViewController {
         alertController.addAction(okAction)
         
         DispatchQueue.main.async {
+            if self.view.window?.rootViewController?.presentedViewController is JogDetailViewController{
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
             self.view?.window?.rootViewController?.present(alertController, animated: true, completion: nil)
         }
     }

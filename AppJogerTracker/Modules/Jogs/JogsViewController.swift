@@ -34,7 +34,7 @@ class JogsViewController: BaseViewController<JogsView, JogsViewModel>  {
                               viewModel.onErrorHandling
                                 .skip(1)
                                 .subscribe { [weak self] error in
-            self?.showAlert(title: "\(NetworkError.invalidAuthentication)",
+            self?.showAlert(title: LabelConstants.alerErrorTitle,
                             message: LabelConstants.tryAgain)
         }
     ])

@@ -7,14 +7,18 @@ import Action
 
 class JogsEditingViewModel: JogDetailViewModelImpl {
     override func save() {
+        
+        initialJog.date = DateAPIFormatter.date(fromShortString: date.value) ?? Date.now
+        initialJog.distance = Float(distance.value) ?? initialJog.distance
+        initialJog.time = Float(time.value) ?? initialJog.distance
+        
         jogProvider?.editJog(jog: initialJog)
             .subscribe(onSuccess: { [weak self] isSucess in
-                print(isSucess)
                 self?.steps.accept(AppStep.jogs)
-            }, onError: { error in
-                print(error)
-                print(self.initialJog)
+            }, onError: { [weak self] error in
+                self?.onErrorHandling.accept(error)
             })
             .disposed(by: disposeBag)
     }
+    
 }

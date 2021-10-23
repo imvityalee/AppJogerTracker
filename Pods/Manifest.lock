@@ -5,6 +5,7 @@ PODS:
   - Alamofire (5.4.4)
   - Differentiator (4.0.1)
   - IQKeyboardManagerSwift (6.5.6)
+  - KeychainAccess (4.2.2)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya-ObjectMapper/Core (2.9):
@@ -45,6 +46,7 @@ PODS:
 DEPENDENCIES:
   - Action
   - IQKeyboardManagerSwift
+  - KeychainAccess
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift (~> 14.0)
   - ObjectMapper
@@ -64,6 +66,7 @@ SPEC REPOS:
     - Alamofire
     - Differentiator
     - IQKeyboardManagerSwift
+    - KeychainAccess
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
@@ -83,6 +86,7 @@ SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
@@ -97,6 +101,6 @@ SPEC CHECKSUMS:
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 93744ceaebbebcfb566b6ef9d02cbe1ffe4c4acb
+PODFILE CHECKSUM: 779b2259705b88a719ed524d65fa9879f01050ef
 
 COCOAPODS: 1.11.2

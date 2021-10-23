@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController<LoginView,LoginViewModel>  {
             viewModel.onErrorHandling
                 .skip(1)
                 .subscribe { [weak self] error in
-                 self?.showAlert(title: "\(NetworkError.invalidAuthentication)",
+                    self?.showAlert(title: LabelConstants.alertAuthError,
                                  message: LabelConstants.tryAgain)
             }
           ])

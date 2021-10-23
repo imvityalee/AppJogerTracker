@@ -68,7 +68,13 @@ class AppFlow: Flow {
                 guard let self = self else { return }
                 self.rootViewController.dismiss(animated: true, completion: nil)
             }
-      }
+        } else if self.rootViewController.presentedViewController is JogDetailViewController {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in 
+                guard let self = self else { return }
+                self.rootViewController.dismiss(animated: true, completion: nil)
+            }
+        
+        }
         self.rootViewController.pushViewController(viewController, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))
     }
