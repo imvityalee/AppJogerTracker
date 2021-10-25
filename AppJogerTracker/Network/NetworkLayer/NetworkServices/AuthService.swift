@@ -9,7 +9,6 @@ protocol AuthServiceProtocol: AnyObject {
     func signIn(by uuid: String) -> Single<Bool>
 }
 
-
 public class AuthenticationService: AuthServiceProtocol {
     
     private(set) var isAuthenticated = BehaviorRelay<Bool?>(value: nil)
@@ -27,7 +26,7 @@ public class AuthenticationService: AuthServiceProtocol {
     func signIn(by uuid: String) -> Single<Bool> {
         return Single.create { [weak self] single in
             guard let network = self?.network else {
-                single(SingleEvent.error(NetworkErrorHandler.invalidAuth))
+                single(SingleEvent.error(Errors.NetworkErrorHandler.invalidAuth))
                 return Disposables.create()
             }
             

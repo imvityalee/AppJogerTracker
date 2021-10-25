@@ -14,7 +14,10 @@ class JogDetailViewController: BaseViewController<JogDetailView, JogDetailViewMo
     public var inputs: JogDetailViewModelImpl.Input {
         return JogDetailViewModelImpl.Input(menuTrigger: contentView.menuButton.rx.tap.asDriver(),
                                             closeTrigger: contentView.closeButton.rx.tap.asDriver(),
-                                            savetrigger: contentView.saveButton.rx.tap.asDriver(),time: contentView.timeTextFiled.rx.text.orEmpty.asDriver(),distance: contentView.distanceTexfield.rx.text.orEmpty.asDriver(), date: contentView.dateTextfield.rx.text.orEmpty.asDriver())
+                                            savetrigger: contentView.saveButton.rx.tap.asDriver(),
+                                            time: contentView.timeTextFiled.rx.text.orEmpty.asDriver(),
+                                            distance:contentView.distanceTexfield.rx.text.orEmpty.asDriver(),
+                                            date: contentView.dateTextfield.rx.text.orEmpty.asDriver())
     }
     public func bind(output: JogDetailViewModelImpl.Output) {
        disposableBag.insert([
@@ -23,8 +26,9 @@ class JogDetailViewController: BaseViewController<JogDetailView, JogDetailViewMo
           output.model.drive(onNext: contentView.configure(model:)),
           viewModel.onErrorHandling
             .skip(1)
-            .subscribe { [weak self] _ in
-                self?.showAlert(title: LabelConstants.tryAgain, message: LabelConstants.tryAgain)
+            .subscribe { [unowned self] _ in
+                self.showAlert(title: "\(Errors.AlertErrors.titleError)",
+                               message: "\(Errors.AlertErrors.authError)")
             }
        ])
     }

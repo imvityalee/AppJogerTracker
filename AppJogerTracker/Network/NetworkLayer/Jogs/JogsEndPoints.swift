@@ -44,13 +44,13 @@ extension JogsEndPoints: TargetType {
                                       encoding: URLEncoding.default)
         case .createJog(let jog, let token):
             return .requestParameters(parameters: ["access_token": token,
-                                                   "date": jog.date.timeIntervalSinceReferenceDate.description,
+                                                   "date": DateAPIFormatter.shortString(fromDate: jog.date),
                                                    "distance": jog.distance,
                                                    "time": jog.time],
                                       encoding: JSONEncoding.default)
         case .editJog(let jog, let token):
             return .requestParameters(parameters: ["access_token": token,
-                                                   "date" : jog.date.timeIntervalSinceReferenceDate.description,
+                                                   "date" : DateAPIFormatter.shortString(fromDate: jog.date),
                                                    "distance": jog.distance,
                                                    "time": jog.time,
                                                    "jog_id": jog.id ?? "",

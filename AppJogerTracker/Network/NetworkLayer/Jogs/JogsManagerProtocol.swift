@@ -5,8 +5,8 @@ import Moya
 
 protocol JogsNetworkManagerProtocol {
     func jogs() -> Single<GetJogsResponse>
-    func createJog(jog: Jog) -> Single<CreateJogResponse>
-    func editJog(jog: Jog) -> Single<EditJogResponse>
+    func createJog(jog: Jog) -> Single<AddJogResponse>
+    func editJog(jog: Jog) -> Single<AddJogResponse>
     func checkIfJogExists(_ jog: Jog) -> Single<Void>
 }
 
@@ -22,7 +22,7 @@ extension NetworkLayer: JogsNetworkManagerProtocol {
                     && $0.date == jog.date
                     && $0.time == jog.time
                 }) {
-                    throw NetworkErrorHandler.jogAlreadyExists
+                    throw Errors.NetworkErrorHandler.jogAlreadyExists
                 }
             }
             
@@ -32,12 +32,12 @@ extension NetworkLayer: JogsNetworkManagerProtocol {
                            target: JogsEndPoints.jogs(token: preferences?.userToken ?? ""))
     }
     
-    func createJog(jog: Jog) -> Single<CreateJogResponse> {
+    func createJog(jog: Jog) -> Single<AddJogResponse> {
         return sendRequest(provider: jogsProvider,
                            target: JogsEndPoints.createJog(jog: jog, token: preferences?.userToken ?? ""))
     }
     
-    func editJog(jog: Jog) -> Single<CreateJogResponse> {
+    func editJog(jog: Jog) -> Single<AddJogResponse> {
         return sendRequest(provider: jogsProvider,
                            target: JogsEndPoints.editJog(jog: jog, token: preferences?.userToken ?? ""))
     }

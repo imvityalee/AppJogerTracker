@@ -10,7 +10,6 @@ class JogInfoViewModel: BaseViewModel, Stepper {
     private func openMenu() {
         steps.accept(AppStep.menu)
     }
-    
 }
 
 extension JogInfoViewModel: ViewModelType {

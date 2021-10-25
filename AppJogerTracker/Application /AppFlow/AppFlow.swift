@@ -59,28 +59,25 @@ class AppFlow: Flow {
     }
     
     private func navigateToJogs() -> FlowContributors {
-        let service = appAssembly.container.resolve(JogsProviderProtocol.self)
+        let service = appAssembly.container.resolve(JogsProviderService.self)
         let viewModel = JogsViewModel.init(jogsProvider: service)
         let viewController = JogsViewController.init(viewModel: viewModel)
         
         if self.rootViewController.presentedViewController is MenuController {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-                guard let self = self else { return }
+            dispatchAsyncAfter { [unowned self] in
                 self.rootViewController.dismiss(animated: true, completion: nil)
             }
         } else if self.rootViewController.presentedViewController is JogDetailViewController {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in 
-                guard let self = self else { return }
+            dispatchAsyncAfter { [unowned self] in
                 self.rootViewController.dismiss(animated: true, completion: nil)
             }
-        
         }
         self.rootViewController.pushViewController(viewController, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))
     }
     
     private func navigateToJogsDetails(jog: Jog) -> FlowContributors {
-        let service = appAssembly.container.resolve(JogsProviderProtocol.self)
+        let service = appAssembly.container.resolve(JogsProviderService.self)
         let viewModel = JogsEditingViewModel.init(jogProvider: service, jog: jog)
         let viewController = JogDetailViewController(viewModel: viewModel)
         viewController.modalTransitionStyle = .crossDissolve
@@ -90,7 +87,7 @@ class AppFlow: Flow {
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))
     }
     private func navigateToAddJog() -> FlowContributors {
-        let service = appAssembly.container.resolve(JogsProviderProtocol.self)
+        let service = appAssembly.container.resolve(JogsProviderService.self)
         let viewModel = JogAddingViewModel.init(jogProvider: service, jog: .init())
         let viewController = JogDetailViewController(viewModel: viewModel)
         viewController.modalTransitionStyle = .crossDissolve
@@ -115,8 +112,7 @@ class AppFlow: Flow {
         let viewModel = JogInfoViewModel.init()
         let viewController = JogInfoViewController(viewModel: viewModel)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-            guard let self = self else { return }
+        dispatchAsyncAfter { [unowned self] in
             self.rootViewController.dismiss(animated: true, completion: nil)
         }
         

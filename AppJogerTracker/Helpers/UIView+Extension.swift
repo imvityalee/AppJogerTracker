@@ -1,8 +1,15 @@
-//
-//  UIView+Extension.swift
-//  AppJogerTracker
-//
-//  Created by Victor Lee on 24/10/21.
-//
+import UIKit
 
-import Foundation
+public extension UIView {
+    @discardableResult
+    func addSubViews(_ views: [UIView?]) -> UIView {
+        views.forEach { (view) in
+            if let view = view {
+                view.translatesAutoresizingMaskIntoConstraints = false
+                self.addSubview(view)
+            }
+        }
+        return self
+    }
+
+}

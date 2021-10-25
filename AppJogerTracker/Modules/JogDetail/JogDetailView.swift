@@ -2,7 +2,6 @@ import Foundation
 import SnapKit
 import UIKit
 
-
 class JogDetailView: BaseView {
     
     var view: UIView!
@@ -28,7 +27,7 @@ class JogDetailView: BaseView {
     }
     override func setUpView() {
         super.setUpView()
-        configureDatePicker()
+        configureDateView()
         configureSaveButton()
         configureCloseButton()
         configureTimeTexftield()
@@ -92,21 +91,22 @@ class JogDetailView: BaseView {
         
     }
     
+
     
     private func configureMainView()  {
         view = UIView.init()
         view.backgroundColor = .systemGreen
         view.layer.cornerRadius = 29
         
-        view.addSubview(closeButton)
-        view.addSubview(distanceTexfield)
-        view.addSubview(distanceLabel)
-        view.addSubview(timeTextFiled)
-        view.addSubview(timeLabel)
-        view.addSubview(dateTextfield)
-        view.addSubview(dateLabel)
-        view.addSubview(timeLabel)
-        view.addSubview(saveButton)
+        view.addSubViews([closeButton,
+                          distanceTexfield,
+                          distanceLabel,
+                          timeTextFiled,
+                          timeLabel,
+                          dateTextfield,
+                          dateLabel,
+                          timeLabel,
+                          saveButton])
         self.addSubview(view)
         
     }
@@ -132,7 +132,7 @@ class JogDetailView: BaseView {
         makeRoundedView(timeTextFiled)
     }
     
-    private func configureDatePicker() {
+    private func configureDateView() {
         dateTextfield = .init()
         makeRoundedView(dateTextfield)
         

@@ -1,5 +1,4 @@
 import Foundation
-import ObjectMapper
 
 struct LoginResponse: Decodable {
     let response: AuthModel
@@ -20,44 +19,3 @@ struct AuthModel: Decodable {
           tokenType = try container.decode(String.self, forKey: .tokenType)
       }
 }
-
-//struct LoginResponse: Mappable {
-//    var response: AuthModel?
-//
-//    init() {}
-//    init?(map: Map) {
-//        self.init()
-//    }
-//
-//    mutating func mapping(map: Map) {
-//        response <- map["response"]
-//    }
-//
-//}
-//struct AuthModel: Mappable {
-//
-//        var accessToken: String?
-//        var tokenType: String?
-//
-//        init () { }
-//        init?(map: Map) { self.init()   }
-//
-//        mutating func mapping(map: Map) {
-//            accessToken <- map["access_token"]
-//            tokenType <- map["token_type"]
-//        }
-//}
-
-
-
-
-//    var accessToken: String?
-//    var tokenType: String?
-//
-//    init () { }
-//    init?(map: Map) { self.init()   }
-//
-//    mutating func mapping(map: Map) {
-//        accessToken <- map["access_token"]
-//        tokenType <- map["token_type"]
-//    }

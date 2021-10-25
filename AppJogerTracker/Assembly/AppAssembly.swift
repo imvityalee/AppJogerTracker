@@ -27,7 +27,7 @@ class AppAssembly {
             AuthenticationService(authApi: $0.resolve(NetworkLayer.self), preferences: $0.resolve(AppPreferences.self))
         }.inObjectScope(.container)
         
-        container.register(JogsProviderProtocol.self) {
+        container.register(JogsProviderService.self) {
             JogsProvider(network: $0.resolve(NetworkLayer.self))
         }.inObjectScope(.container)
         
@@ -44,7 +44,7 @@ class AppAssembly {
         }.inObjectScope(.container)
         
         container.register(JogsViewModel.self) {
-            JogsViewModel(jogsProvider: $0.resolve(JogsProviderProtocol.self))
+            JogsViewModel(jogsProvider: $0.resolve(JogsProviderService.self))
         }.inObjectScope(.container)
         
         container.register(JogDetailViewModelImpl.self) {
@@ -52,14 +52,14 @@ class AppAssembly {
         }
         
         container.register(JogsEditingViewModel.self) {
-            JogsEditingViewModel(jogProvider: $0.resolve(JogsProviderProtocol.self), jog: $0.resolve(Jog.self)!)
+            JogsEditingViewModel(jogProvider: $0.resolve(JogsProviderService.self), jog: $0.resolve(Jog.self)!)
         }
         
         container.register(JogAddingViewModel.self) {
-            JogAddingViewModel(jogProvider: $0.resolve(JogsProviderProtocol.self), jog: $0.resolve(Jog.self)!)
+            JogAddingViewModel(jogProvider: $0.resolve(JogsProviderService.self), jog: $0.resolve(Jog.self)!)
         }
         
-        container.register(JogsProviderProtocol.self) {
+        container.register(JogsProviderService.self) {
             JogsProvider(network: $0.resolve(NetworkLayer.self))
         }.inObjectScope(.container)
         

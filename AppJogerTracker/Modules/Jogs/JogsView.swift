@@ -4,13 +4,11 @@ import Foundation
 class JogsView: BaseView {
     var jogsTabelView: UITableView!
     var addJogsButton: UIButton!
-//    var datePicker: UIDatePicker!
     
     override func setUpView() {
         super.setUpView()
         configureJogsTableView()
         configureAddJogsButton()
-//        configureDatePicker()
     }
     override func setUpConstraints() {
         super.setUpConstraints()
@@ -38,8 +36,4 @@ class JogsView: BaseView {
         
         self.addSubview(addJogsButton)
     }
-    
-//    private func configureDatePicker() {
-//        self.addSubview(datePicker)
-//    }
 }

@@ -1,6 +1,5 @@
 import Foundation
 
-
 struct JogsDetailPresentableModel {
     var distance: Float
     var time: Float

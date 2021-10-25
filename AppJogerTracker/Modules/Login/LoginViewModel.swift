@@ -3,22 +3,26 @@ import RxFlow
 import RxSwift
 import RxCocoa
 
-class LoginViewModel: Stepper {
+class LoginViewModel: BaseViewModel, Stepper {
     
     var steps = PublishRelay<Step>.init()
     var uuid: BehaviorRelay<String> = .init(value: "")
     var onErrorHandling: BehaviorRelay<Error?> = .init(value: nil)
-    
+    let appPreferences = AppPreferences.init()
     weak var service: AuthServiceProtocol?
-    
-    let disposBag = DisposeBag()
   
     init(service: AuthServiceProtocol?) {
         self.service = service
     }
     
     var initialStep: Step {
-        AppStep.login
+        var step: AppStep
+        if appPreferences.isUserMakeLogin {
+            step = .jogs
+        } else {
+            step = .login
+        }
+        return step
     }
     
      func openMenu() {
@@ -32,14 +36,12 @@ class LoginViewModel: Stepper {
                 self?.steps.accept(AppStep.jogs)
             } onError: { [weak self] error in
                 self?.onErrorHandling.accept(error)
-            }.disposed(by: disposBag)
+            }.disposed(by: disposeBag)
 
     }
 }
 
 extension LoginViewModel: ViewModelType {
-
-    
     struct Input {
         let menuTrigger: Driver<Void>
         let requisite: Driver<String>
@@ -54,7 +56,7 @@ extension LoginViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         let menuButton = input.menuTrigger.map(openMenu)
         let nextTrigger = input.nextTrigger.do(onNext: logIn)
-        let requisite = input.requisite.drive(uuid)
+        let _ = input.requisite.drive(uuid)
         return Output(menuTapped: menuButton, nextTapped: nextTrigger)
     }
 }

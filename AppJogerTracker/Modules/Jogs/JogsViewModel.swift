@@ -11,13 +11,12 @@ class JogsViewModel: BaseViewModel, Stepper {
     var jogsModel: BehaviorRelay<[JogsSactionModel]> = .init(value: [])
     var onErrorHandling: BehaviorRelay<Error?> = .init(value: nil)
     
-    let disposBag = DisposeBag()
     
-    weak var jogsProvider: JogsProviderProtocol?
+    weak var jogsProvider: JogsProviderService?
     
     let jogsData = BehaviorRelay<[Jog]>(value: [])
     
-    init(jogsProvider: JogsProviderProtocol?) {
+    init(jogsProvider: JogsProviderService?) {
 
         self.jogsProvider = jogsProvider
     }
@@ -29,7 +28,7 @@ class JogsViewModel: BaseViewModel, Stepper {
                 self?.jogsModel.accept([.init(header: LabelConstants.jogs, items: jogs)])
             }, onError: { [weak self] error in
                 self?.onErrorHandling.accept(error)
-            }).disposed(by: disposBag)
+            }).disposed(by: disposeBag)
     }
     
    private func menuTapped() {

@@ -17,8 +17,6 @@ class JogsViewController: BaseViewController<JogsView, JogsViewModel>  {
         bindViewModel()
         contentView.jogsTabelView.rx.setDelegate(self)
             .disposed(by: disposableBag)
-        
-        
     }
     
     private func bindViewModel() {
@@ -33,9 +31,9 @@ class JogsViewController: BaseViewController<JogsView, JogsViewModel>  {
                               output.menuTapped.drive(),
                               viewModel.onErrorHandling
                                 .skip(1)
-                                .subscribe { [weak self] error in
-            self?.showAlert(title: LabelConstants.alerErrorTitle,
-                            message: LabelConstants.tryAgain)
+                                .subscribe { [unowned self] error in
+            self.showAlert(title: "\(Errors.AlertErrors.titleError)",
+                           message: "\(Errors.AlertErrors.authError)")
         }
     ])
         

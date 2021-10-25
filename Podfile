@@ -5,7 +5,6 @@ target 'AppJogerTracker' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-    pod 'ObjectMapper'
     pod 'IQKeyboardManagerSwift'
     pod 'RxSwift', '5.0'
     pod 'RxCocoa', '5.0'
@@ -17,7 +16,6 @@ target 'AppJogerTracker' do
     pod 'RxFlow'
     pod 'RxDataSources', '~> 4.0'
     pod 'Moya/RxSwift', '~> 14.0'
-    pod 'Moya-ObjectMapper/RxSwift'
 
 
   # Pods for AppJogerTracker

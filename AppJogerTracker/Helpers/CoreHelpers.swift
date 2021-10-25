@@ -1,8 +1,8 @@
-//
-//  CoreHelpers.swift
-//  AppJogerTracker
-//
-//  Created by Victor Lee on 24/10/21.
-//
-
 import Foundation
+
+public func dispatchAsyncAfter(time: Double = 0.1,  action: @escaping () -> Void)  {
+    DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+        action()
+    }
+}
+

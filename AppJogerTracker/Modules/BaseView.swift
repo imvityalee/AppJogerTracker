@@ -70,12 +70,14 @@ public class BaseView: UIView {
     
     public func configureMenuButton() {
         menuButton = UIButton.init(type: .custom)
-        menuButton.setImage(UIImage(named: ImageConstants.menuImage)!, for: .normal)
+        menuButton.setImage(UIImage(named: ImageConstants.menuImage)!,
+                            for: .normal)
     }
     
     public func configureFilterButton() {
         filterButton = UIButton.init(type: .custom)
-        filterButton.setImage(UIImage(named: ImageConstants.filterImage)!, for: .normal)
+        filterButton.setImage(UIImage(named: ImageConstants.filterImage)!,
+                              for: .normal)
     }
     
 }

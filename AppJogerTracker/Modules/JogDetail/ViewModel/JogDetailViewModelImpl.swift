@@ -4,7 +4,6 @@ import RxSwift
 import Foundation
 import Action
 
-
 class JogDetailViewModelImpl: BaseViewModel, Stepper {
     
     var jogsFactory = JogsDetailFactory.init()
@@ -16,12 +15,11 @@ class JogDetailViewModelImpl: BaseViewModel, Stepper {
     
     var jogsPresentableModel: BehaviorRelay<JogsDetailPresentableModel> = .init(value: .init())
     
-    let disposeBag = DisposeBag()
     
-    weak var jogProvider: JogsProviderProtocol?
+    weak var jogProvider: JogsProviderService?
     var initialJog: Jog
     
-    init(jogProvider: JogsProviderProtocol?, jog: Jog) {
+    init(jogProvider: JogsProviderService?, jog: Jog) {
         self.initialJog = jog
         self.jogProvider = jogProvider
     }
@@ -32,6 +30,9 @@ class JogDetailViewModelImpl: BaseViewModel, Stepper {
     
     func save() {
         fatalError("save method was not implemented correctly")
+    }
+    func prepareJog(jog: Jog) -> Jog {
+        fatalError("prepare jog was not implemented correctly")
     }
     
     func menuTapped() {

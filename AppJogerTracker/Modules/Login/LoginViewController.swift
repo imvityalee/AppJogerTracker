@@ -8,8 +8,6 @@ class LoginViewController: BaseViewController<LoginView,LoginViewModel>  {
         super.viewDidLoad()
         contentView.filterButton.isHidden = true
         bind(output: viewModel.transform(input: inputs))
-         
-      
     }
        private var inputs: LoginViewModel.Input {
            return LoginViewModel.Input(menuTrigger: contentView.menuButton.rx.tap.asDriver(),
@@ -24,9 +22,9 @@ class LoginViewController: BaseViewController<LoginView,LoginViewModel>  {
             
             viewModel.onErrorHandling
                 .skip(1)
-                .subscribe { [weak self] error in
-                    self?.showAlert(title: LabelConstants.alertAuthError,
-                                 message: LabelConstants.tryAgain)
+                .subscribe { [unowned self] error in
+                    self.showAlert(title: "\(Errors.AlertErrors.titleError)",
+                                   message: "\(Errors.AlertErrors.authError)")
             }
           ])
        }

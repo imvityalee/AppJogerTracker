@@ -6,21 +6,11 @@ PODS:
   - Differentiator (4.0.1)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.2)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya-ObjectMapper/Core (2.9):
-    - Moya (~> 14.0.0-beta.6)
-    - ObjectMapper
-  - Moya-ObjectMapper/RxSwift (2.9):
-    - Moya-ObjectMapper/Core
-    - Moya/RxSwift
-    - RxSwift
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - ObjectMapper (4.2.0)
   - RxBlocking (5.0.0):
     - RxSwift (~> 5)
   - RxCocoa (5.0.0):
@@ -47,9 +37,7 @@ DEPENDENCIES:
   - Action
   - IQKeyboardManagerSwift
   - KeychainAccess
-  - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift (~> 14.0)
-  - ObjectMapper
   - RxBlocking (= 5.0)
   - RxCocoa (= 5.0)
   - RxDataSources (~> 4.0)
@@ -68,8 +56,6 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - KeychainAccess
     - Moya
-    - Moya-ObjectMapper
-    - ObjectMapper
     - RxBlocking
     - RxCocoa
     - RxDataSources
@@ -88,8 +74,6 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -101,6 +85,6 @@ SPEC CHECKSUMS:
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 779b2259705b88a719ed524d65fa9879f01050ef
+PODFILE CHECKSUM: 8963480174a5e9cdc53239cc5e339adf9b72b369
 
 COCOAPODS: 1.11.2

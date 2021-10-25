@@ -16,7 +16,8 @@ class JogCell: UITableViewCell {
         return LabelConstants.jogCell
     }
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle,
+                  reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureCell()
         configureView()
@@ -55,11 +56,14 @@ class JogCell: UITableViewCell {
     func configureConstraints() {
         
         stackView.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().offset(-10)
+            $0.leading.equalTo(jogImageView.snp.trailing).offset(50)
         }
 
         jogImageView.snp.makeConstraints {
             $0.centerY.equalTo(stackView).offset(10)
+            $0.width.height.equalTo(87)
             $0.leading.equalTo(10)
         }
     }
@@ -79,7 +83,8 @@ class JogCell: UITableViewCell {
     
     private func dateStringFormat(from date: Date) -> String? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "yyyy/dd/MM"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
         return dateFormatter.string(from: date)
     }
 }

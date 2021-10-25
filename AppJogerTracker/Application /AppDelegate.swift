@@ -12,7 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var container: Container = .init()
   
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureFlow()
         IQKeyboardManager.shared.enable = true
         return true

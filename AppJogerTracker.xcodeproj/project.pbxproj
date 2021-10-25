@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14DECF143B045C332B928C45 /* Pods_AppJogerTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41D7CA1E4EA28BB6AA2E379 /* Pods_AppJogerTracker.framework */; };
-		4A27B7C606E87AF55C544B6C /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14495DA22AEF313CB2D5622F /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework */; };
-		5859912ADCE20D019FF36E34 /* Pods_AppJogerTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBED9959B967D406C0E1E9F /* Pods_AppJogerTrackerTests.framework */; };
+		4400ADB5A180194C4BFD39AB /* Pods_AppJogerTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7571EC9C4191A1E2D44F2E /* Pods_AppJogerTrackerTests.framework */; };
+		B1042D7127259CC600709834 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1042D7027259CC600709834 /* UIView+Extension.swift */; };
+		B1042D732725A4E800709834 /* CoreHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1042D722725A4E800709834 /* CoreHelpers.swift */; };
 		B11C395A271FE18500209681 /* AuthEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C3959271FE18500209681 /* AuthEndPoints.swift */; };
 		B11C395C271FE64900209681 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C395B271FE64900209681 /* AuthModel.swift */; };
 		B11C395E271FE97B00209681 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C395D271FE97B00209681 /* AppPreferences.swift */; };
@@ -57,6 +57,8 @@
 		B1DC2A8B27215E95002A868B /* JogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A8A27215E95002A868B /* JogsService.swift */; };
 		B1DC2A8E2722ACAD002A868B /* JogDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A8D2722ACAD002A868B /* JogDetailFactory.swift */; };
 		B1DC2A912722AD01002A868B /* JogsEditingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC2A902722AD01002A868B /* JogsEditingViewModel.swift */; };
+		B896F33D7C338811227305E6 /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4FDB1BCACC7670C52CA713 /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework */; };
+		CC7573D615EED98896A3BED5 /* Pods_AppJogerTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E62FC63EB506D7D75F3E70A /* Pods_AppJogerTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +79,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D3E216784136780BDF8B21 /* Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		14495DA22AEF313CB2D5622F /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTracker_AppJogerTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E81F1966B904190DCC65552 /* Pods-AppJogerTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7A943BF6F861BF5ACACC0C17 /* Pods-AppJogerTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker/Pods-AppJogerTracker.release.xcconfig"; sourceTree = "<group>"; };
-		86F49DD048B3252AFDB99F9B /* Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8DBED9959B967D406C0E1E9F /* Pods_AppJogerTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D2030C4C94FC20927981CCC /* Pods-AppJogerTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker.debug.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker/Pods-AppJogerTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		0F4FDB1BCACC7670C52CA713 /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTracker_AppJogerTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7571EC9C4191A1E2D44F2E /* Pods_AppJogerTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		346892BF635F7D803D869EEC /* Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		773B685C4458D24D0E67CE31 /* Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E62FC63EB506D7D75F3E70A /* Pods_AppJogerTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D49419D9B49688BE0ABDA19 /* Pods-AppJogerTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1042D7027259CC600709834 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B1042D722725A4E800709834 /* CoreHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHelpers.swift; sourceTree = "<group>"; };
 		B11C3959271FE18500209681 /* AuthEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndPoints.swift; sourceTree = "<group>"; };
 		B11C395B271FE64900209681 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		B11C395D271FE97B00209681 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
@@ -135,8 +138,9 @@
 		B1DC2A8A27215E95002A868B /* JogsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsService.swift; sourceTree = "<group>"; };
 		B1DC2A8D2722ACAD002A868B /* JogDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogDetailFactory.swift; sourceTree = "<group>"; };
 		B1DC2A902722AD01002A868B /* JogsEditingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsEditingViewModel.swift; sourceTree = "<group>"; };
-		B4D6F30B71971232DDA0AEFC /* Pods-AppJogerTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
-		D41D7CA1E4EA28BB6AA2E379 /* Pods_AppJogerTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppJogerTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8FE34FB009DAD664851EC8D /* Pods-AppJogerTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker.release.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker/Pods-AppJogerTracker.release.xcconfig"; sourceTree = "<group>"; };
+		CA9C0E4E98EE63D7827389EA /* Pods-AppJogerTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2B36281D6AF8EDF9684060B /* Pods-AppJogerTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJogerTracker.debug.xcconfig"; path = "Target Support Files/Pods-AppJogerTracker/Pods-AppJogerTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14DECF143B045C332B928C45 /* Pods_AppJogerTracker.framework in Frameworks */,
+				CC7573D615EED98896A3BED5 /* Pods_AppJogerTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5859912ADCE20D019FF36E34 /* Pods_AppJogerTrackerTests.framework in Frameworks */,
+				4400ADB5A180194C4BFD39AB /* Pods_AppJogerTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,19 +164,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A27B7C606E87AF55C544B6C /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework in Frameworks */,
+				B896F33D7C338811227305E6 /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		816991E83B98568B4A098856 /* Frameworks */ = {
+		A86DD28E49F0F0979BC6697A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D41D7CA1E4EA28BB6AA2E379 /* Pods_AppJogerTracker.framework */,
-				14495DA22AEF313CB2D5622F /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework */,
-				8DBED9959B967D406C0E1E9F /* Pods_AppJogerTrackerTests.framework */,
+				8E62FC63EB506D7D75F3E70A /* Pods_AppJogerTracker.framework */,
+				0F4FDB1BCACC7670C52CA713 /* Pods_AppJogerTracker_AppJogerTrackerUITests.framework */,
+				2A7571EC9C4191A1E2D44F2E /* Pods_AppJogerTrackerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +212,8 @@
 				B11C3965272063C800209681 /* Alertable.swift */,
 				B18EDA392723D074004DD7FE /* DateAPIFormatter.swift */,
 				B18EDA3D2723F3A7004DD7FE /* ErrorHelper.swift */,
+				B1042D7027259CC600709834 /* UIView+Extension.swift */,
+				B1042D722725A4E800709834 /* CoreHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -248,7 +254,7 @@
 				B1857E63271AF80A0038ED42 /* AppJogerTrackerUITests */,
 				B1857E41271AF8050038ED42 /* Products */,
 				D60BE7D39D21828BE2582F2D /* Pods */,
-				816991E83B98568B4A098856 /* Frameworks */,
+				A86DD28E49F0F0979BC6697A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -306,8 +312,8 @@
 		B194AB9D271E97EC00D428C1 /* JogDetail */ = {
 			isa = PBXGroup;
 			children = (
-				B1DC2A8F2722ACE3002A868B /* ViewModel */,
 				B1DC2A8C2722AC8C002A868B /* Factory */,
+				B1DC2A8F2722ACE3002A868B /* ViewModel */,
 				B194AB9F271E980D00D428C1 /* JogDetailView.swift */,
 				B194ABA1271E983100D428C1 /* JogDetailViewController.swift */,
 			);
@@ -439,12 +445,12 @@
 		D60BE7D39D21828BE2582F2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D2030C4C94FC20927981CCC /* Pods-AppJogerTracker.debug.xcconfig */,
-				7A943BF6F861BF5ACACC0C17 /* Pods-AppJogerTracker.release.xcconfig */,
-				02D3E216784136780BDF8B21 /* Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig */,
-				86F49DD048B3252AFDB99F9B /* Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig */,
-				5E81F1966B904190DCC65552 /* Pods-AppJogerTrackerTests.debug.xcconfig */,
-				B4D6F30B71971232DDA0AEFC /* Pods-AppJogerTrackerTests.release.xcconfig */,
+				F2B36281D6AF8EDF9684060B /* Pods-AppJogerTracker.debug.xcconfig */,
+				B8FE34FB009DAD664851EC8D /* Pods-AppJogerTracker.release.xcconfig */,
+				346892BF635F7D803D869EEC /* Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig */,
+				773B685C4458D24D0E67CE31 /* Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig */,
+				CA9C0E4E98EE63D7827389EA /* Pods-AppJogerTrackerTests.debug.xcconfig */,
+				9D49419D9B49688BE0ABDA19 /* Pods-AppJogerTrackerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -456,11 +462,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1857E6A271AF80A0038ED42 /* Build configuration list for PBXNativeTarget "AppJogerTracker" */;
 			buildPhases = (
-				B86A76CB0CBDFDDCC035BC14 /* [CP] Check Pods Manifest.lock */,
+				EB3F95DE54A46641F13BBAB4 /* [CP] Check Pods Manifest.lock */,
 				B1857E3C271AF8050038ED42 /* Sources */,
 				B1857E3D271AF8050038ED42 /* Frameworks */,
 				B1857E3E271AF8050038ED42 /* Resources */,
-				DD9EE3480E2CE34900486B52 /* [CP] Embed Pods Frameworks */,
+				4AF150C2E751A5966533838F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -475,11 +481,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1857E6D271AF80A0038ED42 /* Build configuration list for PBXNativeTarget "AppJogerTrackerTests" */;
 			buildPhases = (
-				A2242988B2A59975C8D004C9 /* [CP] Check Pods Manifest.lock */,
+				0C6DF3104EBAC25B7C7F8D97 /* [CP] Check Pods Manifest.lock */,
 				B1857E52271AF80A0038ED42 /* Sources */,
 				B1857E53271AF80A0038ED42 /* Frameworks */,
 				B1857E54271AF80A0038ED42 /* Resources */,
-				087E022CA3D2E3E61778184B /* [CP] Embed Pods Frameworks */,
+				FC3AC8187976FC1CF546299C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -495,11 +501,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1857E70271AF80A0038ED42 /* Build configuration list for PBXNativeTarget "AppJogerTrackerUITests" */;
 			buildPhases = (
-				F8881608145B4F4B70F11BD0 /* [CP] Check Pods Manifest.lock */,
+				7C1715A83B591FAB8D341B86 /* [CP] Check Pods Manifest.lock */,
 				B1857E5C271AF80A0038ED42 /* Sources */,
 				B1857E5D271AF80A0038ED42 /* Frameworks */,
 				B1857E5E271AF80A0038ED42 /* Resources */,
-				4E71E436A637CD1A6E45DC75 /* [CP] Embed Pods Frameworks */,
+				6F09DC4B1120E2BC98CCDFD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -581,41 +587,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		087E022CA3D2E3E61778184B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4E71E436A637CD1A6E45DC75 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2242988B2A59975C8D004C9 /* [CP] Check Pods Manifest.lock */ = {
+		0C6DF3104EBAC25B7C7F8D97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -637,29 +609,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B86A76CB0CBDFDDCC035BC14 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppJogerTracker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD9EE3480E2CE34900486B52 /* [CP] Embed Pods Frameworks */ = {
+		4AF150C2E751A5966533838F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -676,7 +626,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker/Pods-AppJogerTracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8881608145B4F4B70F11BD0 /* [CP] Check Pods Manifest.lock */ = {
+		6F09DC4B1120E2BC98CCDFD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppJogerTracker-AppJogerTrackerUITests/Pods-AppJogerTracker-AppJogerTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C1715A83B591FAB8D341B86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -698,6 +665,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB3F95DE54A46641F13BBAB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppJogerTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3AC8187976FC1CF546299C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppJogerTrackerTests/Pods-AppJogerTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -713,6 +719,7 @@
 				B138DB24271C05E60059E584 /* MenuController.swift in Sources */,
 				B138DB22271C05D80059E584 /* MenuView.swift in Sources */,
 				B194ABB6271ED6A400D428C1 /* AppAssembly.swift in Sources */,
+				B1042D7127259CC600709834 /* UIView+Extension.swift in Sources */,
 				B1A2D5BC271D5A5500501D82 /* JogCell.swift in Sources */,
 				B1A2D5B4271D4FC700501D82 /* JogsViewController.swift in Sources */,
 				B194ABA0271E980D00D428C1 /* JogDetailView.swift in Sources */,
@@ -720,6 +727,7 @@
 				B138DB1C271BED8D0059E584 /* Constants.swift in Sources */,
 				B194ABAD271ECDBD00D428C1 /* JogInfoViewController.swift in Sources */,
 				B18EDA3A2723D074004DD7FE /* DateAPIFormatter.swift in Sources */,
+				B1042D732725A4E800709834 /* CoreHelpers.swift in Sources */,
 				B194ABA4271E983A00D428C1 /* JogDetailViewModelImpl.swift in Sources */,
 				B1DC2A912722AD01002A868B /* JogsEditingViewModel.swift in Sources */,
 				B138DB2B271C12BE0059E584 /* AppFlow.swift in Sources */,
@@ -912,7 +920,7 @@
 		};
 		B1857E6B271AF80A0038ED42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D2030C4C94FC20927981CCC /* Pods-AppJogerTracker.debug.xcconfig */;
+			baseConfigurationReference = F2B36281D6AF8EDF9684060B /* Pods-AppJogerTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -940,7 +948,7 @@
 		};
 		B1857E6C271AF80A0038ED42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A943BF6F861BF5ACACC0C17 /* Pods-AppJogerTracker.release.xcconfig */;
+			baseConfigurationReference = B8FE34FB009DAD664851EC8D /* Pods-AppJogerTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -968,7 +976,7 @@
 		};
 		B1857E6E271AF80A0038ED42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E81F1966B904190DCC65552 /* Pods-AppJogerTrackerTests.debug.xcconfig */;
+			baseConfigurationReference = CA9C0E4E98EE63D7827389EA /* Pods-AppJogerTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -994,7 +1002,7 @@
 		};
 		B1857E6F271AF80A0038ED42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4D6F30B71971232DDA0AEFC /* Pods-AppJogerTrackerTests.release.xcconfig */;
+			baseConfigurationReference = 9D49419D9B49688BE0ABDA19 /* Pods-AppJogerTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1020,7 +1028,7 @@
 		};
 		B1857E71271AF80A0038ED42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02D3E216784136780BDF8B21 /* Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig */;
+			baseConfigurationReference = 346892BF635F7D803D869EEC /* Pods-AppJogerTracker-AppJogerTrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1044,7 +1052,7 @@
 		};
 		B1857E72271AF80A0038ED42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86F49DD048B3252AFDB99F9B /* Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig */;
+			baseConfigurationReference = 773B685C4458D24D0E67CE31 /* Pods-AppJogerTracker-AppJogerTrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

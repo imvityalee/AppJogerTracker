@@ -3,8 +3,10 @@ import Foundation
 public class DateAPIFormatter {
     static let formatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = .autoupdatingCurrent
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         formatter.dateFormat = "MM.dd.yyyy"
-
         return formatter
     }()
 
